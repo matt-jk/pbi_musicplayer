@@ -1,0 +1,30 @@
+{
+    "objects": {},
+    "dataRoles": [
+        {
+            "displayName": "Song Name",
+            "name": "song_name",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "Song Content",
+            "name": "song_content",
+            "kind": "GroupingOrMeasure"
+        },
+        {
+            "displayName": "Click Content",
+            "name": "click_content",
+            "kind": "GroupingOrMeasure"
+        }
+    ],
+    "dataViewMappings": [
+        {
+            "table": {
+                "rows": {
+                    "select":[{"for": {"in": "song_name"}},{"for": {"in": "song_content"}},{"for": {"in": "click_content"}}]
+                    ,"dataReductionAlgorithm":{"top":{"count":3000}}
+                }
+            }
+        }
+    ]
+}
